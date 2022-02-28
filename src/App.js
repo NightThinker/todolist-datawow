@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Progress from "./components/Progress";
+import List from "./components/List";
+import "./styles/todo.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <div className="content">
+                <Progress />
+                <div className="flex justify-between">
+                    <h2>Tasks</h2>
+                    <div>dropdown</div>
+                </div>
+                <ul className="container-list">
+                    <List />
+                </ul>
+                <input placeholder="Add your todo..." className="radius-full w-full" />
+            </div>
+        </div>
+    );
 }
 
 export default App;
